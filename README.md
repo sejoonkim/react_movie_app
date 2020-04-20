@@ -86,7 +86,7 @@
   - Introduced by React
   - JS + React
 
-- Create `Fruit.js` Component
+- **JSX #1**: Create `Fruit.js` Component
 
   1. ```javascript
      import React from "react";
@@ -152,3 +152,52 @@
 
        export default App;
        ```
+
+- **JSX #2**: Send Information to Child Components
+
+  1. Passing Information
+
+     - ```javascript
+       <Food fav="bulgogi" />
+       ```
+
+     - Prop name = Value
+
+  2. Console.log Props
+
+     - ```javascript
+       <Food
+         fav="bulgogi"
+         boolArr={true}
+         foodList={["kimchi", 12, true, "gogi", 0]}
+       />;
+
+       function Food(props) {
+         console.log(props);
+         return <h3>I Love Food!</h3>;
+       }
+       /*
+       {fav: "bulgogi", boolArr: true, foodList: Array(5)}
+       boolArr: true
+       fav: "bulgogi"
+       foodList: Array(5)
+       0: "kimchi"
+       1: 12
+       2: true
+       3: "gogi"
+       4: 0
+       length: 5
+       __proto__: Array(0)
+       */
+       ```
+
+  3. Get Elements in Props Object - `ES6 Destructuring Syntax`
+
+     - ```javascript
+       function Food({ fav }) {
+         return <h3>I Love {fav}!</h3>;
+       }
+       // Browser: I Love bulgogi!
+       ```
+
+     -
