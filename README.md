@@ -200,4 +200,39 @@
        // Browser: I Love bulgogi!
        ```
 
-     -
+<br/>
+
+### Dynamic Component Generation
+
+- Simulate received data from API
+
+1. Create array of food
+
+   - { name: "" image: "" }
+
+2. `.map(callback)`
+
+   - takes an array, returns a modified array
+
+3. Provide `<Food />` with props
+
+   - ```javascript
+     {
+       foodILike.map((food) => {
+         return <Food name={food.name} image={food.image} />;
+       });
+     }
+     ```
+
+4. Modify function Food
+
+   - ```javascript
+     function Food({ name, image }) {
+       return (
+         <>
+           <h3>I Love {name}!</h3>
+           <img src={image} alt={name} />
+         </>
+       );
+     }
+     ```
