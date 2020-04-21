@@ -274,3 +274,37 @@
 - give `<Food />` **"key"** prop
   - But not using the number value
   - FOR React's internal use
+
+<br/>
+
+### Protection with PropTypes
+
+- > Check if Props that the Child is getting from Parent, are the ones expected by Child
+
+- add "rating" to each objects in array
+
+- Process of using prop-types
+
+  1. `npm i prop-types`
+
+  2. ```javascript
+     import propTypes from "prop-types";
+     ```
+
+  3. ```javascript
+     Food.propTypes = {
+       name: PropTypes.string.isRequired,
+       image: PropTypes.string.isRequired,
+       rating: PropTypes.string.isRequired,
+     };
+     ```
+
+     - Write **description of props** that are expected
+
+  4. > Warning: Failed prop type: Invalid prop `rating` of type `number` supplied to `Food`, expected `string`.
+
+     - Error Message
+
+  5. Check for `Type` and `Requiredness`
+
+  6. More at https://reactjs.org/docs/typechecking-with-proptypes.html
