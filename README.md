@@ -397,3 +397,15 @@
     5. **componentDidUpdate()**
   - `Unmounting`
     1. **componentWillUnmount()**
+
+<br/>
+
+### Design Component for Movie App
+
+- `state`
+  - isLoading: boolean
+  - movies: array
+- `render()`
+  - start with presenting "Loading"
+- `componentDidMount()`
+  - mimic fetch() by `setTimeout(() => {})`
