@@ -436,4 +436,33 @@
   }
   ```
 
--
+<br/>
+
+### Rendering the Movies
+
+- ```javascript
+  const movies = await axios.get("https://yts-proxy.now.sh/list_movies.json");
+  this.setState((current) => (current.movies = [...movies.data.data.movies]));
+
+  // ES6 Way
+  const {
+    data: {
+      data: { movies },
+    },
+  } = await axios.get("https://yts-proxy.now.sh/list_movies.json");
+  this.setState({ movies });
+  ```
+
+- `Movies.js`
+
+  - Does not to manage state => use function component(?)
+  - `Movie.propTypes`
+    - look at the elements in the movie array and write them down
+    - copy all "keys" in `Movie.propTypes` to Movie component
+
+- `App.js`
+
+  - different render ways
+    1. insider render()
+    2. create render_movies()
+  - pass props just declared in `Movies.js`
