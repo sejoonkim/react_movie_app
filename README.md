@@ -377,3 +377,23 @@
   ```
 
   - use the arrow function method
+
+<br/>
+
+### Component Life Cycle
+
+- create ~ kill component
+  - Link - https://reactjs.org/docs/react-component.html
+  - `Mounting`
+    1. **constructor()**
+    2. static getDerivedStateFromProps()
+    3. **render()**
+    4. **componentDidMount()**
+  - `Updating`
+    1. static getDerivedStateFromProps()
+    2. shouldComponentUpdate()
+    3. **render()**
+    4. getSnapshotBeforeUpdate()
+    5. **componentDidUpdate()**
+  - `Unmounting`
+    1. **componentWillUnmount()**
