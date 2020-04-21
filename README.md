@@ -346,3 +346,34 @@
   - ```javascript
     add = () => {};
     ```
+
+<br/>
+
+### State
+
+- ```javascript
+  add = () => {
+    this.state.count = 1;
+  };
+  ```
+
+  - > Do not mutate state directly. Use setState().
+
+  - React does not update `render()`
+
+- `this.setState({count: 1})`
+
+  - changes state object and executes render()
+  - Virtual DOM -> only changes **what is changed**
+
+- ```javascript
+  add = () => {
+    this.setState({ count: this.state.count + 1 });
+  };
+
+  add = () => {
+    this.setState((current) => ({ count: current.count + 1 }));
+  };
+  ```
+
+  - use the arrow function method
