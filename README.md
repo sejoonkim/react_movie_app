@@ -80,7 +80,9 @@
 ### Create React Component
 
 - Definition of Component
+
   - function that returns HTML
+
 - What is **JSX**?
 
   - Introduced by React
@@ -236,3 +238,39 @@
        );
      }
      ```
+
+<br/>
+
+### .map
+
+- ```javascript
+  {
+    foodILike.map((food) => {
+      return <Food name={food.name} image={food.image} />;
+    });
+  }
+  //=>
+  {
+    foodILike.map(renderFood);
+  }
+  ```
+
+- in `function renderFood`
+
+  - being executed by the number of elements in `foodILike` array
+
+  - ```javascript
+    return <Food name={name} image={image} />;
+    ```
+
+- revert the changes in `App.js`
+
+  - > Each child in a list should have a unique "key" prop.
+
+  - All elements in Reach should be unique
+
+  - add `id` to each objects
+
+- give `<Food />` **"key"** prop
+  - But not using the number value
+  - FOR React's internal use
