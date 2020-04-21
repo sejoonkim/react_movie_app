@@ -308,3 +308,41 @@
   5. Check for `Type` and `Requiredness`
 
   6. More at https://reactjs.org/docs/typechecking-with-proptypes.html
+
+<br/>
+
+<br/>
+
+## 3. State
+
+### Class Components and State
+
+- transform **function component** `App` to **class component**
+
+  - ```javascript
+    class App extends React.Component {}
+    ```
+
+  - doesn't have `return` method but has `render` method
+
+  - ```javascript
+    render() {
+        return <h1>I am a class component</h1>;
+      }
+    ```
+
+- Why class components?
+
+  - has state vs useState()
+
+  - ```javascript
+    state = {DATA THAT WILL CHANGE}
+    ```
+
+- How to create function(method) inside class?
+
+  - RECOMMENDED
+
+  - ```javascript
+    add = () => {};
+    ```
