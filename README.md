@@ -409,3 +409,31 @@
   - start with presenting "Loading"
 - `componentDidMount()`
   - mimic fetch() by `setTimeout(() => {})`
+
+<br/>
+
+<br/>
+
+## Movie App
+
+### Fetch Movies from API
+
+- API - https://yts-proxy.now.sh/list_movies.json
+
+  - Execution time comparison: `componentDidMount()` & `axios`
+  - `axios` might take longer time to finish
+  - need async-await
+
+- ```javascript
+  getMovies = async () => {
+      const movies = await axios.get("https://yts-proxy.now.sh/list_movies.json");
+      this.setState((current) => (current.movies = [...movies.data.data.movies]));
+      console.log(this.state.movies);
+  };
+
+  componentDidMount() {
+      this.getMovies();
+  }
+  ```
+
+-
