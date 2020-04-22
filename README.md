@@ -210,7 +210,7 @@
 
 1. Create array of food
 
-   - { name: "" image: "" }
+- { name: "" image: "" }
 
 2. `.map(callback)`
 
@@ -272,6 +272,7 @@
   - add `id` to each objects
 
 - give `<Food />` **"key"** prop
+
   - But not using the number value
   - FOR React's internal use
 
@@ -466,3 +467,28 @@
     1. insider render()
     2. create render_movies()
   - pass props just declared in `Movies.js`
+
+### Styling the Movies
+
+- HTML
+
+  - How to **structure** `Tags`
+    - Top-most : `class="container"`
+      - Component1: `class="loader"`
+        - Child Tag: `class="loader__text"`
+      - Component2: `class="movies"`
+        - Child Tag: `class="movie"`
+          - Child Tag: `class="movie__data"`
+            - `class="movie__title"`
+            - `class="movie__year"`
+            - `class="movie__summary"`
+
+- CSS
+
+  1. easy implementation = `styled.components`
+
+  2. ```javascript
+     <h3 class="movie__title" style={{ backgroundColor: "red" }}>
+     ```
+
+  3. create CSS file in `src/`
