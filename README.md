@@ -671,3 +671,30 @@ Deploying to Github Pages
   1. cannot use `<LINK>` outside `<Router>`
   2. `HashRouter` or `BrowserRouter`
      - `BrowserRouter` has trouble deploying to Github Pages
+
+<br/>
+
+### Sharing Props Between Routes
+
+- `About.js`
+
+  - at every route, React router is sending default props
+
+- `Navigation.js`
+
+  - https://reacttraining.com/react-router/web/guides/quick-start
+
+  - ```html
+    <Link to={{ pathname: "/about", state: { fromNavigation: true, }, }} >
+    ```
+
+  - send information as props
+
+- `Movie.js`
+
+  - ```html
+    <Link to={{ pathname: "/movie-detail", state: { year, title, summary,
+    poster, genres, }, }} >
+    ```
+
+  - when clicked, send to "movie-detail" with props
