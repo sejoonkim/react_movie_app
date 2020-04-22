@@ -1,5 +1,9 @@
 # Movie App with React
 
+Project Link: [Movie App with React](https://sejoonkim.github.io/react_movie_app/)
+
+<br/>
+
 ## 1. Setup
 
 ### Create React App
@@ -415,7 +419,7 @@
 
 <br/>
 
-## Movie App
+## 4. Movie App
 
 ### Fetch Movies from API
 
@@ -547,3 +551,36 @@
   - ```html
     <p className="movie__summary">{summary.slice(0, 180)}...</p>
     ```
+
+<br/>
+
+<br/>
+
+## 5. Deploy
+
+Deploying to Github Pages
+
+1. `npm i gh-pages`
+
+2. `package.json`
+
+   - add
+
+     - ```json
+       "homepage": "https://sejoonkim.github.io/react_movie_app/"
+       ```
+
+   - in `"scripts"`
+
+     - ```json
+       "deploy": "gh-pages -d build"
+       ```
+
+     - ```json
+       "predeploy": "npm run build"
+       ```
+
+3. `npm run deploy`
+   - Process of NPM
+     1. `"predeploy"`
+     2. `"deploy"`
