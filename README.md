@@ -473,22 +473,63 @@
 - HTML
 
   - How to **structure** `Tags`
-    - Top-most : `class="container"`
-      - Component1: `class="loader"`
-        - Child Tag: `class="loader__text"`
-      - Component2: `class="movies"`
-        - Child Tag: `class="movie"`
-          - Child Tag: `class="movie__data"`
-            - `class="movie__title"`
-            - `class="movie__year"`
-            - `class="movie__summary"`
+
+    - Top-most : `className="container"`
+      - Component1: `className="loader"`
+        - Child Tag: `className="loader__text"`
+      - Component2: `className="movies"`
+        - Child Tag: `className="movie"`
+          - Child Tag: `className="movie__data"`
+            - `className="movie__title"`
+            - `className="movie__year"`
+            - `className="movie__summary"`
+
+  - ```html
+    <img src="{poster}" alt="{title}" title="{title}" />
+    ```
+
+    - The `title` attribute is shown as a **tooltip** text when the mouse moves over the element = gives extra information
 
 - CSS
 
   1. easy implementation = `styled.components`
 
   2. ```javascript
-     <h3 class="movie__title" style={{ backgroundColor: "red" }}>
+     <h3 className="movie__title" style={{ backgroundColor: "red" }}>
      ```
 
   3. create CSS file in `src/`
+
+<br/>
+
+### Adding Genres
+
+- `"class"` Or `"className"`
+
+  - in `HTML`
+
+    - `<p class=""></p>`
+
+  - in JS or JSX
+    - `class` is confused with actual JS class
+    - so use `className`
+
+- Process
+
+  1. `Movie.js`
+
+     - `Movie.propTypes` -> add genres: `PropTypes.arrayOf(PropTypes.string)`
+     - `function Movie` -> add `genres` prop
+
+  2. `App.js`
+
+     - props in `<Movie>` -> add `genres={movie.genres}`
+
+  3. `Movie.js`
+
+     - add `<ul>` -> .map() genres -> get genre, index
+     - **.map()** = `function(currentValue, index, arr)`
+
+       - do not be confused by the **order of variables**
+
+     - key: no id, use **index**
