@@ -535,3 +535,15 @@
      - key: no id, use **index**
 
 ### Styling with CSS
+
+<br/>
+
+### Cut Summary
+
+- same width, height text
+
+  - cut array
+
+  - ```html
+    <p className="movie__summary">{summary.slice(0, 180)}...</p>
+    ```

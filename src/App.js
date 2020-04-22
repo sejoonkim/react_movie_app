@@ -15,7 +15,6 @@ class App extends React.Component {
       },
     } = await axios.get("https://yts-proxy.now.sh/list_movies.json?limit=50");
     this.setState({ movies, isLoading: false });
-    console.log(this.state.movies);
   };
   componentDidMount() {
     this.getMovies();
