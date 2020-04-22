@@ -698,3 +698,16 @@ Deploying to Github Pages
     ```
 
   - when clicked, send to "movie-detail" with props
+
+<br/>
+
+### Redirecting
+
+- `Detail.js`
+
+  - convert to Class Component
+  - React sends some props by default
+    - `location`, `history`
+
+- TODO
+  - redux to keep states stored
