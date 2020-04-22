@@ -609,3 +609,44 @@ Deploying to Github Pages
      - Home.js
 
   4. move everything from `App.js` to `Home.js`
+
+<br/>
+
+### Building the Router
+
+- router: takes URL, looks at it, leads where to go
+
+- ```javascript
+  import { HashRouter, Route } from "react-router-dom";
+  ```
+
+- ```html
+  <HashRouter>
+    <Route path="/" component="{Home}" />
+    <Route path="/about" component="{About}" />
+  </HashRouter>
+  ```
+
+- Problem:
+
+  - 2 components rendered at once
+
+    - The way URLs work:
+
+    - takes URL
+
+    - compare with everything in routes
+
+    - find match -> show the component
+
+    - > There would be multiple matches
+      >
+      > "/" is considered a route
+
+  - solution
+
+    - ```html
+      <Route path="/" exact="{true}" component="{Home}" />
+      ```
+
+    - exact={true} on the home URL
