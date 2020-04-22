@@ -533,3 +533,5 @@
        - do not be confused by the **order of variables**
 
      - key: no id, use **index**
+
+### Styling with CSS
