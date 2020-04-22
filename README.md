@@ -584,3 +584,28 @@ Deploying to Github Pages
    - Process of NPM
      1. `"predeploy"`
      2. `"deploy"`
+
+<br/>
+
+<br/>
+
+## 6. Routing
+
+### React Router DOM
+
+- `npm i react-router-dom`
+
+- Clean up for the Router
+
+  1. create 2 folders
+     - components
+     - routes
+  2. `components/`
+     - Movie.js
+     - Movie.css
+  3. `routes`
+
+     - About.js
+     - Home.js
+
+  4. move everything from `App.js` to `Home.js`
