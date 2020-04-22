@@ -650,3 +650,24 @@ Deploying to Github Pages
       ```
 
     - exact={true} on the home URL
+
+<br/>
+
+### Building the Navigation
+
+- has to be in all pages
+
+- Problem: `HTML` refreshes when goes to somewhere, redirected
+
+  - ```javascript
+    import { Link } from "react-router-dom";
+    ```
+
+  - substitute `<a>` to `<Link>`
+
+    - with `to="URL"`
+
+- REMEMBER
+  1. cannot use `<LINK>` outside `<Router>`
+  2. `HashRouter` or `BrowserRouter`
+     - `BrowserRouter` has trouble deploying to Github Pages
