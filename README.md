@@ -4,12 +4,12 @@ Project Link: [Movie App with React](https://sejoonkim.github.io/react_movie_app
 
 Contents:
 
-1. [Setup](#1.-setup)
-2. [JSX, Props](#2.-JSX-Props)
-3. [State](#3.-state)
-4. [Movie App](#4.-movie-app)
-5. [Deploy](#5.-deploy)
-6. [Routing](#6.-routing)
+1. [Setup](#1-setup)
+2. [JSX, Props](#2-JSX-Props)
+3. [State](#3-state)
+4. [Movie App](#4-movie-app)
+5. [Deploy](#5-deploy)
+6. [Routing](#6-routing)
 
 <br/>
 
