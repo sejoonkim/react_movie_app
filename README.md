@@ -2,6 +2,15 @@
 
 Project Link: [Movie App with React](https://sejoonkim.github.io/react_movie_app/)
 
+Contents:
+
+1. [Setup](#1.-setup)
+2. [JSX & Props](#2.-JSX-&-Props)
+3. [State](#3.-state)
+4. [Movie App](#4.-movie-app)
+5. [Deploy](#5.-deploy)
+6. [Routing](#6.-routing)
+
 <br/>
 
 ## 1. Setup
@@ -570,17 +579,19 @@ Deploying to Github Pages
        "homepage": "https://sejoonkim.github.io/react_movie_app/"
        ```
 
-   - in `"scripts"`
+   ````
+   - in ```"scripts"```
 
-     - ```json
-       "deploy": "gh-pages -d build"
-       ```
+    - ```json
+      "deploy": "gh-pages -d build"
+   ````
 
-     - ```json
-       "predeploy": "npm run build"
-       ```
+   - ```json
+     "predeploy": "npm run build"
+     ```
 
 3. `npm run deploy`
+
    - Process of NPM
      1. `"predeploy"`
      2. `"deploy"`
@@ -668,6 +679,7 @@ Deploying to Github Pages
     - with `to="URL"`
 
 - REMEMBER
+
   1. cannot use `<LINK>` outside `<Router>`
   2. `HashRouter` or `BrowserRouter`
      - `BrowserRouter` has trouble deploying to Github Pages
